@@ -1,7 +1,7 @@
-darkcoin-seeder
+sibcoin-seeder
 ===============
 
-Darkcoin-seeder is a crawler for the Darkcoin network, which exposes a list
+Sibcoin-seeder is a crawler for the Sibcoin network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
