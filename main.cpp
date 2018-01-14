@@ -356,8 +356,8 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"188.65.149.35", "188.65.149.41","151.80.122.121","5.101.103.219", ""};
-static const string testnet_seeds[] = {"testnet-dnsseed.sibcoin.net", ""};
+static const string mainnet_seeds[] = {"85.206.163.120", "188.65.149.41","151.80.122.121","85.206.163.128", ""};
+static const string testnet_seeds[] = {"185.25.51.87", "151.80.122.121", "185.25.50.58", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
