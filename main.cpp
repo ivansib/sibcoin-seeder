@@ -75,7 +75,7 @@ public:
         {0, 0, 0, 0}
       };
       int option_index = 0;
-      int c = getopt_long(argc, argv, "h:n:m:t:p:d:o:i:k:w:", long_options, &option_index);
+      int c = getopt_long(argc, argv, "h:n:m:t:p:d:o:i:k:w:?", long_options, &option_index);
       if (c == -1) break;
       switch (c) {
         case 'h': {
@@ -298,8 +298,8 @@ extern "C" int GetIPList(void *data, char *requestedHostname, addr_t* addr, int 
   while (i<max) {
     int j = i + (rand() % (size - i));
     do {
-        bool ok = (ipv4 && thread->cache[j].v == 4) ||
-                  (ipv6 && thread->cache[j].v == 6);
+        bool ok = (ipv4 && thisflag.cache[j].v == 4) ||
+                  (ipv6 && thisflag.cache[j].v == 6);
         if (ok) break;
         j++;
         if (j==size)
