@@ -82,17 +82,17 @@ public:
           host = optarg;
           break;
         }
-        
+
         case 'm': {
           mbox = optarg;
           break;
         }
-        
+
         case 'n': {
           ns = optarg;
           break;
         }
-        
+
         case 't': {
           int n = strtol(optarg, NULL, 10);
           if (n > 0 && n < 1000) nThreads = n;
@@ -298,8 +298,8 @@ extern "C" int GetIPList(void *data, char *requestedHostname, addr_t* addr, int 
   while (i<max) {
     int j = i + (rand() % (size - i));
     do {
-        bool ok = (ipv4 && thisflag.cache[j].v == 4) ||
-                  (ipv6 && thisflag.cache[j].v == 6);
+        bool ok = (ipv4 && thread->cache[j].v == 4) ||
+                  (ipv6 && thread->cache[j].v == 6);
         if (ok) break;
         j++;
         if (j==size)
